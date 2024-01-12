@@ -12,8 +12,8 @@ to setup lulzbot.cfg updates, run the following
 
 ```sh
 cd ~
-git clone https://github.com/mainsail-crew/mainsail-config.git
-ln -sf ~/mainsail-config/mainsail.cfg ~/printer_data/config/mainsail.cfg
+git clone https://github.com/lulzbot3d/lulzbot-config.git
+ln -sf ~/lulzbot-config/lulzbot.cfg ~/printer_data/config/lulzbot.cfg
 ```
 
 This will clone the lulzbot-config repository to your machine and then create a lulzbot.cfg file which will be used for all future updates.
