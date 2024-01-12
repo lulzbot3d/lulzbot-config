@@ -14,6 +14,8 @@ to setup lulzbot.cfg updates, run the following
 cd ~
 git clone https://github.com/lulzbot3d/lulzbot-config.git
 ln -sf ~/lulzbot-config/lulzbot.cfg ~/printer_data/config/lulzbot.cfg
+ln -sf ~/lulzbot-config/.macro.cfg ~/printer_data/config/.macro.cfg
+ln -sf ~/lulzbot-config/.tool_heads.cfg ~/printer_data/config/.tool_heads.cfg
 ```
 
 This will clone the lulzbot-config repository to your machine and then create a lulzbot.cfg file which will be used for all future updates.
