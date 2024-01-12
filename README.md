@@ -1,9 +1,6 @@
 # Lulzbot klipper macros and settings
 
-Here is where the configuration files of stock Lulzbot machines are maintained.
-
-Updates to lulzbot.cfg will be maintained by the Lulzbot team and will take effect as long as the following line is located in printer.cfg.
-
+Here is where the configuration files of stock Lulzbot machines are maintained. Updates to lulzbot.cfg will be maintained by the Lulzbot team and will take effect as long as the following line is located in printer.cfg.
 
 ```ini
 [include lulzbot.cfg]
@@ -13,3 +10,5 @@ Updates to lulzbot.cfg will be maintained by the Lulzbot team and will take effe
 
 If you chose to customize your machine, copy the contents of lulzbot.cfg to printer.cfg and future updates will no longer overwrite your customized printer.
 
+
+This form of updates is inspired by the Mainsail-Crew with [mainsail.cfg](https://github.com/mainsail-crew/mainsail-config) updates.
