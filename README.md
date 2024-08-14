@@ -13,10 +13,8 @@ To setup lulzbot.cfg updates, run the following
 ```sh
 cd ~
 git clone https://github.com/lulzbot3d/lulzbot-config.git
-ln -sf ~/lulzbot-config/lulzbot.cfg ~/printer_data/config/lulzbot.cfg
-ln -sf ~/lulzbot-config/.macro.cfg ~/printer_data/config/.macro.cfg
-ln -sf ~/lulzbot-config/.tool_heads.cfg ~/printer_data/config/.tool_heads.cfg
-ln -sf ~/lulzbot-config/.BTT_USB_ADXL345.cfg ~/printer_data/config/.BTT_USB_ADXL345.cfg
+ln -sf ~/lulzbot-config/lulzbot ~/printer_data/config/lulzbot
+ln -sf ~/lulzbot-config/.theme ~/printer_data/config/.theme
 ```
 ### Add updater section
 
