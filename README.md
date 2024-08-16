@@ -3,7 +3,7 @@
 Here is where the configuration files of stock Lulzbot machines are maintained. Updates to lulzbot.cfg will be maintained by the Lulzbot team and will take effect as long as the following line is located in printer.cfg.
 
 ```
-[include lulzbot.cfg]
+[include lulzbot/include_files.cfg]
 ```
 
 ## Setup
