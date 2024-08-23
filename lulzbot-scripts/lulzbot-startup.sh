@@ -9,6 +9,11 @@
 
 echo "Lulzbot Startup Script Start: $(date)" >>/home/biqu/printer_data/logs/klippy.log
 
+# This script detects if the acceleromter is present and uncomments the include line in printer.cfg.
 sudo -u biqu /home/biqu/lulzbot-config/lulzbot-scripts/accel-detect.sh
+
+# This script removes any orphaned and empty usb-sda folders in the gcodes folder.
+# These can be left behind if you pull the flash drive while still in the folder.
+sudo -u biqu /lulzbot-config/lulzbot-scripts/USB_Automount/cleanup_usb.sh
 
 echo "Lulzbot Startup Script End: $(date)" >>/home/biqu/printer_data/logs/klippy.log
