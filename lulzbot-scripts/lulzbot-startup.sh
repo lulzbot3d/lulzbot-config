@@ -16,4 +16,9 @@ sudo -u biqu /home/biqu/lulzbot-config/lulzbot-scripts/accel-detect.sh
 # These can be left behind if you pull the flash drive while still in the folder.
 sudo -u biqu /lulzbot-config/lulzbot-scripts/USB_Automount/cleanup_usb.sh
 
+# This fixes an issue where the URL for the backports repo changed and broke System updates in Update Manager.
+# We don't seem to need the backports repo, so the script comments it out in the sources file.
+# Note: This needs to be run as root, so it is not run as user biqu.
+/home/biqu/lulzbot-config/lulzbot-scripts/disable-backports.sh
+
 echo "Lulzbot Startup Script End: $(date)" >>/home/biqu/printer_data/logs/klippy.log
