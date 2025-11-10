@@ -9,6 +9,9 @@
 
 echo "Lulzbot Startup Script Start: $(date)" >>/home/biqu/printer_data/logs/klippy.log
 
+# This fixes an issue where sudo commands hang for 5 to 10 seconds if the hostname is not in /etc/hosts.
+HOST=$(hostname); grep -qxF "127.0.0.1   $HOST" /etc/hosts || echo "127.0.0.1   $HOST" | sudo tee -a /etc/hosts > /dev/null
+
 # This script detects if the acceleromter is present and uncomments the include line in printer.cfg.
 sudo -u biqu /home/biqu/lulzbot-config/lulzbot-scripts/accel-detect.sh
 
