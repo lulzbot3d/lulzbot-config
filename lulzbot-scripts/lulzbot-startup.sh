@@ -24,4 +24,8 @@ sudo -u biqu /lulzbot-config/lulzbot-scripts/USB_Automount/cleanup_usb.sh
 # Note: This needs to be run as root, so it is not run as user biqu.
 /home/biqu/lulzbot-config/lulzbot-scripts/disable-backports.sh
 
+# Comment out the xrandr commands in /etc/rc.local that set the refresh rate to 40 Hz.
+# I don't think it ever helped with the issue I thought it helped, and it is causing problems with our new HDMI5 screens.
+sudo sed -i 's/^[[:space:]]*\(sudo xrandr\)/# \1/' /etc/rc.local
+
 echo "Lulzbot Startup Script End: $(date)" >>/home/biqu/printer_data/logs/klippy.log
