@@ -6,13 +6,15 @@ Here is where the configuration files of stock Lulzbot machines are maintained. 
 [include lulzbot/include_files.cfg]
 ```
 
-## Setup
+## Setup for AMOS
 
 To setup lulzbot.cfg updates, run the following
 
 ```sh
 cd ~
 git clone https://github.com/lulzbot3d/lulzbot-config.git
+cd lulzbot-config/
+git switch AMOS_develop
 ln -sf ~/lulzbot-config/lulzbot ~/printer_data/config/lulzbot
 ln -sf ~/lulzbot-config/.theme ~/printer_data/config/.theme
 ```
@@ -25,7 +27,7 @@ Locate moonraker.conf on your machine and add the following...
 ```ini
 [update_manager lulzbot-config]
 type: git_repo
-primary_branch: main
+primary_branch: AMOS_develop
 path: ~/lulzbot-config
 origin: https://github.com/lulzbot3d/lulzbot-config.git
 managed_services: klipper
