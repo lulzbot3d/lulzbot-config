@@ -10,6 +10,6 @@
 echo "Lulzbot Startup Script Start: $(date)" >>/home/pi/printer_data/logs/klippy.log
 
 # Automatically update the Beacon device path in printer.cfg at startup
-sudo -u pi /home/pi/lulzbot-config/lulzbot-scripts/update_beacon_id.sh
+sudo -u pi /home/pi/lulzbot-config/lulzbot-scripts/update_beacon_id.sh >>/home/pi/printer_data/logs/klippy.log
 
 echo "Lulzbot Startup Script End: $(date)" >>/home/pi/printer_data/logs/klippy.log
