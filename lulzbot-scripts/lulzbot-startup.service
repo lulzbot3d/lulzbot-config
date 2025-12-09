@@ -1,0 +1,11 @@
+[Unit]
+Description=Lulzbot Startup Script
+Before=klipper.service
+
+[Service]
+Type=oneshot
+ExecStart=/home/pi/lulzbot-config/lulzbot-scripts/lulzbot-startup.sh
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
