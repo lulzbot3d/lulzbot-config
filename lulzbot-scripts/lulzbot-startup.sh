@@ -17,7 +17,7 @@ sudo -u biqu /home/biqu/lulzbot-config/lulzbot-scripts/accel-detect.sh
 
 # This script removes any orphaned and empty usb-sda folders in the gcodes folder.
 # These can be left behind if you pull the flash drive while still in the folder.
-sudo -u biqu /lulzbot-config/lulzbot-scripts/USB_Automount/cleanup_usb.sh
+sudo -u biqu /home/biqu/lulzbot-config/lulzbot-scripts/USB_Automount/cleanup_usb.sh
 
 # This fixes an issue where the URL for the backports repo changed and broke System updates in Update Manager.
 # We don't seem to need the backports repo, so the script comments it out in the sources file.
