@@ -7,9 +7,10 @@
 # call it from here with a command that runs it as user pi.
 # Something like:  sudo -u pi /home/pi/lulzbot-config/lulzbot-scripts/example.sh
 
-echo "Lulzbot Startup Script Start: $(date)" >>/home/pi/printer_data/logs/klippy.log
+echo "Lulzbot Startup Script Start: $(date)" >>/home/pi/printer_data/logs/lulzbot-startup.log
 
 # Automatically update the Beacon device path in printer.cfg at startup
-sudo -u pi /home/pi/lulzbot-config/lulzbot-scripts/update_beacon_id.sh >>/home/pi/printer_data/logs/klippy.log
+sudo -u pi /home/pi/lulzbot-config/lulzbot-scripts/update_beacon_id.sh >>/home/pi/printer_data/logs/lulzbot-startup.log
 
-echo "Lulzbot Startup Script End: $(date)" >>/home/pi/printer_data/logs/klippy.log
+echo "Lulzbot Startup Script End: $(date)" >>/home/pi/printer_data/logs/lulzbot-startup.log
+echo >>/home/pi/printer_data/logs/lulzbot-startup.log
