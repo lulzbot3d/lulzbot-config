@@ -2,15 +2,26 @@
    "general":{
       "printername":""
    },
+   "console":{
+      "height":280,
+      "rawOutput":false,
+      "direction":"shell",
+      "entryStyle":"default"
+   },
    "control":{
       "style":"cross",
-      "selectedCrossStep":0,
-      "enableXYHoming":false
+      "selectedCrossStep":5,
+      "enableXYHoming":false,
+      "offsetsZ":[
+         0.01,
+         0.025,
+         0.05,
+         0.1
+      ]
    },
    "dashboard":{
       "nonExpandPanels":{
          "widescreen":[
-            "led-effects-panel"
          ]
       },
       "widescreenLayout1":[
@@ -20,7 +31,7 @@
          },
          {
             "name":"led-effects",
-            "visible":false
+            "visible":true
          }
       ],
       "widescreenLayout2":[
@@ -34,7 +45,7 @@
          },
          {
             "name":"machine-settings",
-            "visible":false
+            "visible":true
          }
       ],
       "widescreenLayout3":[
@@ -50,20 +61,138 @@
             "name":"macros",
             "visible":true
          }
+      ],
+      "desktopLayout2":[
+         {
+            "name":"temperature",
+            "visible":true
+         },
+         {
+            "name":"toolhead-control",
+            "visible":true
+         },
+         {
+            "name":"miscellaneous",
+            "visible":true
+         },
+         {
+            "name":"macros",
+            "visible":true
+         },
+         {
+            "name":"webcam",
+            "visible":true
+         }
+      ],
+      "desktopLayout1":[
+         {
+            "name":"extruder-control",
+            "visible":true
+         },
+         {
+            "name":"miniconsole",
+            "visible":true
+         },
+         {
+            "name":"machine-settings",
+            "visible":true
+         },
+         {
+            "name":"led-effects",
+            "visible":true
+         }
+      ],
+      "mobileLayout":[
+         {
+            "name":"toolhead-control",
+            "visible":true
+         },
+         {
+            "name":"temperature",
+            "visible":true
+         },
+         {
+            "name":"extruder-control",
+            "visible":true
+         },
+         {
+            "name":"miscellaneous",
+            "visible":true
+         },
+         {
+            "name":"miniconsole",
+            "visible":true
+         },
+         {
+            "name":"machine-settings",
+            "visible":true
+         },
+         {
+            "name":"macros",
+            "visible":true
+         },
+         {
+            "name":"webcam",
+            "visible":true
+         },
+         {
+            "name":"led-effects",
+            "visible":true
+         }
+      ],
+      "tabletLayout1":[
+         {
+            "name":"extruder-control",
+            "visible":true
+         },
+         {
+            "name":"miniconsole",
+            "visible":true
+         },
+         {
+            "name":"machine-settings",
+            "visible":true
+         },
+         {
+            "name":"led-effects",
+            "visible":true
+         }
+      ],
+      "tabletLayout2":[
+         {
+            "name":"temperature",
+            "visible":true
+         },
+         {
+            "name":"toolhead-control",
+            "visible":true
+         },
+         {
+            "name":"miscellaneous",
+            "visible":true
+         },
+         {
+            "name":"macros",
+            "visible":true
+         },
+         {
+            "name":"webcam",
+            "visible":true
+         }
       ]
    },
    "gcodeViewer":{
       "klipperCache":{
          "kinematics":"corexy",
          "axis_maximum":[
-            300,
-            300,
+            298,
+            295,
             221,
             0
          ],
          "axis_minimum":[
             0,
-            0,
+            -15,
             -20,
             0
          ]
@@ -174,13 +303,17 @@
          "LED_STATUS_LEVELING",
          "LED_STATUS_MESHING",
          "LED_STATUS_PART_READY",
-         "LED_STATUS_POLICE",
          "LED_STATUS_PRINT_PROGRESS",
          "LED_STATUS_PRINTING",
          "LED_STATUS_READY",
          "OLD_PRINT_START",
          "PRINT_END",
-         "PRINT_START"
+         "PRINT_START",
+         "M141",
+         "M191",
+         "DUMP_VARIABLES",
+         "LED_STATUS_POLICE",
+         "OZTA"
       ]
    },
    "miscellaneous":{
@@ -218,31 +351,48 @@
       }
    },
    "uiSettings":{
-      "primary":"#C1D82F",
-      "logo":"#393939"
+      "primary":"#E2E868",
+      "logo":"#272727",
+      "theme":"mainsail",
+      "mode":"dark"
    },
    "view":{
       "configfiles":{
          "showHiddenFiles":false,
-         "hideBackupFiles":true
+         "hideBackupFiles":true,
+         "countPerPage":-1
       },
       "tempchart":{
          "hideMcuHostSensors":true,
-         "autoscale":true
+         "autoscale":true,
+         "datasetSettings":{
+            "heater_generic chamber_heater":{
+               "color":"#8E379D",
+               "power":true
+            },
+            "temperature_sensor Chamber":{
+               "color":"#8E379D"
+            }
+         },
+         "boolTempchart":true
       },
       "heightmap":{
-         "scaleZMax":1
+         "scaleZMax":6.788759915224657e+199,
+         "mesh":false,
+         "probed":true,
+         "wireframe":false,
+         "flat":false
       },
       "extruder":{
-         "showExtrusionFactor":true
+         "showExtrusionFactor":true,
+         "showPressureAdvance":true,
+         "showExtruderControl":true
       },
       "toolhead":{
          "showSpeedFactor":true
+      },
+      "gcodefiles":{
+         "countPerPage":-1
       }
-   },
-   "console":{
-      "height":280,
-      "rawOutput":false,
-      "direction":"shell"
    }
 }
