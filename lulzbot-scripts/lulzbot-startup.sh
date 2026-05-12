@@ -19,5 +19,8 @@ sudo -u pi /home/pi/lulzbot-config/lulzbot-scripts/update_beacon_id.sh >>/home/p
 # Apply the saved Ethernet mode (if any) at startup
 /home/pi/lulzbot-config/lulzbot-scripts/eth_mode.sh apply >>/home/pi/printer_data/logs/lulzbot-startup.log
 
+# Ensure the timedatectl command is in sudoers so it can be called from the KlipperScreen timezone panel without a password
+/home/pi/lulzbot-config/lulzbot-scripts/timedatectl-nopasswd.sh >>/home/pi/printer_data/logs/lulzbot-startup.log
+
 echo "Lulzbot Startup Script End: $(date)" >>/home/pi/printer_data/logs/lulzbot-startup.log
 echo >>/home/pi/printer_data/logs/lulzbot-startup.log
