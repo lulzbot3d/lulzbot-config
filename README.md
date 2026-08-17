@@ -14,6 +14,7 @@ To setup lulzbot.cfg updates, log into a terminal on the printer and run the fol
 cd ~
 git clone https://github.com/lulzbot3d/lulzbot-config.git
 ln -sf ~/lulzbot-config/lulzbot ~/printer_data/config/lulzbot
+ln -sf ~/lulzbot-config/.theme ~/printer_data/config/.theme
 ```
 
 ### Add include into printer.cfg:

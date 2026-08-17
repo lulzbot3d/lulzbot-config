@@ -1,0 +1,69 @@
+/* .
+This is a dark-mode theme vyper for mainsail
+*/
+
+:root {
+    --Primary:        #C1D82F;
+    --Secondary:      #788814;
+    --c_light_green:  #E2E868;
+    --c_gray:         #666666;
+}
+
+#nav-header .v-toolbar__title {
+    font-size: 24px;
+    vertical-align: middle;
+    color: var(--Primary);
+    font-family: monospace;
+}
+
+.v-application .warning {
+    background-color: var(--c_light_green) !important;
+    border-color: var(--c_light_green);
+}
+
+.v-application .primary {
+    background-color: var(--c_grey) !important;
+    border-color: var(--c_light_green) !important;
+}
+
+.v-application .success--text {
+    color: var(--c_light_green) !important;
+    caret-color: var(--c_light_green) !important;
+}
+
+.v-application .primary--text {
+    color: var(--c_light_green) !important;
+    caret-color: var(--c_light_green) !important;
+}
+
+.v-application a {
+    color: var(--c_light_green);
+}
+
+ .v-btn:not(.v-btn--outlined).warning {
+    color: var(--c_grey) !important;
+}
+
+.v-btn:not(.v-btn--outlined).accent, .v-btn:not(.v-btn--outlined).error, .v-btn:not(.v-btn--outlined).info, .v-btn:not(.v-btn--outlined).primary, .v-btn:not(.v-btn--outlined).secondary, .v-btn:not(.v-btn--outlined).success {
+    color: #f8f8f2 !important;
+}
+
+.v-application .text-body-2, .v-application .text-button {
+    color: var(--c_light_green);
+}
+
+.v-progress-circular__overlay .v-card__text {
+    stroke: var(--c_light_green) !important;
+}
+
+.v-slider__track-fill.primary {
+    background-color: var(--c_light_green) !important;
+    border-color: var(--c_light_green) !important;
+}
+
+.v-slider__thumb.primary {
+    background-color: var(--c_light_green) !important;
+    border-color: var(--c_light_green) !important;
+}
+
+
