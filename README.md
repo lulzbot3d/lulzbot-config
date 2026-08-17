@@ -13,7 +13,10 @@ To setup lulzbot.cfg updates, log into a terminal on the printer and run the fol
 ```sh
 cd ~
 git clone https://github.com/lulzbot3d/lulzbot-config.git
+cd lulzbot-config
+git switch Viking_develop
 ln -sf ~/lulzbot-config/lulzbot ~/printer_data/config/lulzbot
+mv ~/printer_data/config/.theme ~/printer_data/config/.theme.old
 ln -sf ~/lulzbot-config/.theme ~/printer_data/config/.theme
 ```
 
