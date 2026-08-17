@@ -16,10 +16,10 @@ If you wish to customize just one section of any of these config files you may c
 
 ### Branch Usage
 
-main: Not used currently for any LulzBot printer.
-mini3_stable: Production LulzBot Mini3 printers should be on this branch.
-develop: Used for R&D development of LulzBot Mini3 configurations.
-AMOS_main: Main branch for the LulzBot version of the AMOS printer.
-AMOS_develop: Used for R&D development of the LulzBot version of the AMOS printer.
-Symlink_folder: An old branch used when developing the symbolic link configuration method. Should not be used anymore. Will not recieve updates.
-Mini3_config: An old branch some early Mini3 printers were on. Should not be used anymore. Will not receive updates.
+- main: Not used currently for any LulzBot printer.
+- mini3_stable: Production LulzBot Mini3 printers should be on this branch.
+- develop: Used for R&D development of LulzBot Mini3 configurations.
+- AMOS_main: Main branch for the LulzBot version of the AMOS printer.
+- AMOS_develop: Used for R&D development of the LulzBot version of the AMOS printer.
+- Symlink_folder: An old branch used when developing the symbolic link configuration method. Should not be used anymore. Will not receive updates.
+- Mini3_config: An old branch some early Mini3 printers were on. Should not be used anymore. Will not receive updates.
