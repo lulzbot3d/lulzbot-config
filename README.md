@@ -14,7 +14,7 @@ To setup lulzbot.cfg updates, run the following
 cd ~
 git clone https://github.com/lulzbot3d/lulzbot-config.git
 cd lulzbot-config/
-git switch AMOS_develop
+git switch AMOS_main
 ln -sf ~/lulzbot-config/lulzbot ~/printer_data/config/lulzbot
 ln -sf ~/lulzbot-config/.theme ~/printer_data/config/.theme
 ```
@@ -27,7 +27,7 @@ Locate moonraker.conf on your machine and add the following...
 ```ini
 [update_manager lulzbot-config]
 type: git_repo
-primary_branch: AMOS_develop
+primary_branch: AMOS_main
 path: ~/lulzbot-config
 origin: https://github.com/lulzbot3d/lulzbot-config.git
 managed_services: klipper
@@ -36,5 +36,7 @@ managed_services: klipper
 ### How to customize your settings
 
 If you chose to customize your machine, copy the contents of lulzbot.cfg to printer.cfg and future updates will no longer overwrite your customized printer.
+
+If you wish to customize just one section of any of the config files in the lulzbot folder you may copy just that section of the config file into printer.cfg, somewhere below the includes at the top, and make changes there.
 
 This form of updates is inspired by the Mainsail-Crew with [mainsail.cfg](https://github.com/mainsail-crew/mainsail-config) updates.
