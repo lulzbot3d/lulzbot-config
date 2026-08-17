@@ -37,4 +37,6 @@ managed_services: klipper
 
 If you chose to customize your machine, copy the contents of lulzbot.cfg to printer.cfg and future updates will no longer overwrite your customized printer.
 
+If you wish to customize just one section of any of the config files in the lulzbot folder you may copy just that section of the config file into printer.cfg, somewhere below the includes at the top, and make changes there.
+
 This form of updates is inspired by the Mainsail-Crew with [mainsail.cfg](https://github.com/mainsail-crew/mainsail-config) updates.
