@@ -1,23 +1,16 @@
 {
+  "general": {
+    "printername": "Viking"
+  },
   "control": {
     "style": "cross",
-    "selectedCrossStep": 0
-  },
-  "console": {
-  "height": 100
-  },
-  "temperature": {
-  "height": 620
+    "selectedCrossStep": 1
   },
   "dashboard": {
     "nonExpandPanels": {
       "widescreen": []
     },
     "widescreenLayout1": [
-      {
-        "name": "macrogroup_d5b16780-dc37-41ed-9206-d473af56aacc",
-        "visible": true
-      },
       {
         "name": "miniconsole",
         "visible": true
@@ -39,7 +32,7 @@
       },
       {
         "name": "machine-settings",
-        "visible": false
+        "visible": true
       }
     ],
     "widescreenLayout3": [
@@ -50,22 +43,58 @@
       {
         "name": "miscellaneous",
         "visible": true
+      },
+      {
+        "name": "macrogroup_d5b16780-dc37-41ed-9206-d473af56aacc",
+        "visible": true
+      }
+    ],
+    "desktopLayout2": [
+      {
+        "name": "temperature",
+        "visible": true
+      },
+      {
+        "name": "miniconsole",
+        "visible": true
+      },
+      {
+        "name": "miscellaneous",
+        "visible": true
+      },
+      {
+        "name": "macrogroup_d5b16780-dc37-41ed-9206-d473af56aacc",
+        "visible": true
+      }
+    ],
+    "desktopLayout1": [
+      {
+        "name": "toolhead-control",
+        "visible": true
+      },
+      {
+        "name": "extruder-control",
+        "visible": true
+      },
+      {
+        "name": "machine-settings",
+        "visible": true
       }
     ]
   },
   "gcodeViewer": {
     "klipperCache": {
-      "kinematics": "corexz",
+      "kinematics": "corexy",
       "axis_maximum": [
-        177,
-        195,
-        147,
+        294,
+        265,
+        300,
         0
       ],
       "axis_minimum": [
-        -1.5,
-        -29,
-        -3,
+        -2,
+        -40,
+        -5,
         0
       ]
     }
@@ -83,30 +112,6 @@
         "macros": [
           {
             "pos": 1,
-            "name": "END",
-            "color": "group",
-            "showInStandby": true,
-            "showInPrinting": true,
-            "showInPause": true
-          },
-          {
-            "pos": 2,
-            "name": "G29",
-            "color": "group",
-            "showInStandby": true,
-            "showInPrinting": true,
-            "showInPause": true
-          },
-          {
-            "pos": 3,
-            "name": "G34",
-            "color": "group",
-            "showInStandby": true,
-            "showInPrinting": true,
-            "showInPause": true
-          },
-          {
-            "pos": 4,
             "name": "LOAD_FILAMENT",
             "color": "group",
             "showInStandby": true,
@@ -114,15 +119,7 @@
             "showInPause": true
           },
           {
-            "pos": 5,
-            "name": "OG28",
-            "color": "group",
-            "showInStandby": true,
-            "showInPrinting": true,
-            "showInPause": true
-          },
-          {
-            "pos": 6,
+            "pos": 2,
             "name": "PREHEAT_PLA",
             "color": "group",
             "showInStandby": true,
@@ -130,7 +127,7 @@
             "showInPause": true
           },
           {
-            "pos": 7,
+            "pos": 3,
             "name": "PURGE",
             "color": "group",
             "showInStandby": true,
@@ -138,15 +135,7 @@
             "showInPause": true
           },
           {
-            "pos": 8,
-            "name": "START",
-            "color": "group",
-            "showInStandby": true,
-            "showInPrinting": true,
-            "showInPause": true
-          },
-          {
-            "pos": 9,
+            "pos": 4,
             "name": "UNLOAD_FILAMENT",
             "color": "group",
             "showInStandby": true,
@@ -154,8 +143,24 @@
             "showInPause": true
           },
           {
-            "pos": 10,
-            "name": "VARIABLES",
+            "pos": 5,
+            "name": "SET_PAUSE_AT_LAYER",
+            "color": "group",
+            "showInStandby": true,
+            "showInPrinting": true,
+            "showInPause": true
+          },
+          {
+            "pos": 6,
+            "name": "SET_PAUSE_NEXT_LAYER",
+            "color": "group",
+            "showInStandby": true,
+            "showInPrinting": true,
+            "showInPause": true
+          },
+          {
+            "pos": 7,
+            "name": "TEST_SPEED",
             "color": "group",
             "showInStandby": true,
             "showInPrinting": true,
@@ -183,13 +188,46 @@
       }
     }
   },
+  "temperature": {
+    "height": 620
+  },
   "uiSettings": {
-  "primary": "#C1D82F",
-  "logo": "#C1D82F"
+    "primary": "#C1D82F",
+    "logo": "#C1D82F",
+    "navigationStyle": "iconsAndText"
   },
   "view": {
     "configfiles": {
-      "showHiddenFiles": true
+      "showHiddenFiles": true,
+      "countPerPage": -1,
+      "sortBy": "filename",
+      "sortDesc": false,
+      "hideBackupFiles": true
+    },
+    "tempchart": {
+      "hideMcuHostSensors": true,
+      "hideMonitors": true,
+      "boolTempchart": true,
+      "autoscale": true
+    },
+    "gcodefiles": {
+      "countPerPage": 10,
+      "sortBy": "modified",
+      "sortDesc": true
+    },
+    "heightmap": {
+      "scaleZMax": 1.3,
+      "scaleGradient": false
+    },
+    "extruder": {
+      "showFirmwareRetraction": false
+    },
+    "history": {
+      "countPerPage": -1
     }
+  },
+  "console": {
+    "height": 280,
+    "direction": "shell"
   }
 }
