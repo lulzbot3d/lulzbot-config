@@ -6,6 +6,7 @@ This is a dark-mode theme vyper for mainsail
     --Primary:        #C1D82F;
     --Secondary:      #788814;
     --c_light_green:  #E2E868;
+    --c_darker_green: #63683f;
     --c_gray:         #666666;
 }
 
@@ -17,8 +18,8 @@ This is a dark-mode theme vyper for mainsail
 }
 
 .v-application .warning {
-    background-color: var(--c_light_green) !important;
-    border-color: var(--c_light_green);
+    background-color: var(--c_darker_green) !important;
+    border-color: var(--c_darker_green);
 }
 
 .v-application .primary {
