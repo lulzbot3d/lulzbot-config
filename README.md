@@ -13,6 +13,7 @@ To setup lulzbot.cfg updates, run the following
 ```sh
 cd ~
 git clone https://github.com/lulzbot3d/lulzbot-config.git
+git switch develop
 ln -sf ~/lulzbot-config/lulzbot ~/printer_data/config/lulzbot
 ln -sf ~/lulzbot-config/.theme ~/printer_data/config/.theme
 ```
@@ -25,7 +26,7 @@ Locate moonraker.conf on your machine and add the following...
 ```ini
 [update_manager lulzbot-config]
 type: git_repo
-primary_branch: main
+primary_branch: develop
 path: ~/lulzbot-config
 origin: https://github.com/lulzbot3d/lulzbot-config.git
 managed_services: klipper
